@@ -259,19 +259,20 @@ background-color: #c9b458;
 
 @media only screen and (max-width: 500px) {
   body {
-    background-color:white;
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
     padding: 1em;
-    font-size: clamp(1.0rem, 4.0vmin, 1.5rem);
+    font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+    transition: background-color 0.5s ease, color 0.5s ease;
   }
   .keyboard {
     display: grid;
-    grid-template-columns: repeat(20, minmax(auto, 1.3em));
-    grid-auto-rows: 2.5em;
-    gap: .20em;
+    grid-template-columns: repeat(20, minmax(auto, 1.25em));
+    grid-auto-rows: 3em;
+    gap: .25em;
     justify-content: center;
   }
   .guess-grid {
@@ -279,14 +280,14 @@ background-color: #c9b458;
     justify-content: center;
     align-content: center;
     flex-grow: 1;
-    grid-template-columns: repeat(5, 3.5em);
-    grid-template-rows: repeat(6, 3.5em);
+    grid-template-columns: repeat(5, 3.75em);
+    grid-template-rows: repeat(6, 3.75em);
     gap: .35em;
   }
   
   .tile {
     font-size: 2em;
-    color: black;
+    color:var(--primary-color2);
     border: .09em solid hsl(240, 2%, 23%);
     text-transform: uppercase;
     font-weight: bold;
