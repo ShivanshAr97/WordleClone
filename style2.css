@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid lightgrey;
-  padding-bottom: -1em;
 }
 .navbar h1{
   margin: 0.01em;
@@ -34,20 +33,12 @@
 :root{
   --primary-color:white;
   --primary-color2:black;
-  --secondary-color:hsl(
-    var(--hue, 214),
-    var(--saturation, 9%),
-    calc(var(--lightness-offset, 0%) + var(--lightness, 84%))
-  )
+  --secondary-color:hsl(214,9%,84%);
 }
 .dark-theme{
   --primary-color:black;
   --primary-color2:white;
-  --secondary-color: hsl(
-    var(--hue, 200),
-    var(--saturation, 1%),
-    calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
-  );
+  --secondary-color:hsl(214,9%,84%);
 }
 body{
   background-color: var(--primary-color);
@@ -76,7 +67,7 @@ body{
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-color) ;
-  color: var(--primary-color2);
+  color: black;
   font-weight: bold;
   fill: rgb(26, 20, 20);
   text-transform: uppercase;
@@ -99,9 +90,7 @@ body{
 }
 
 .key.wrong {
-  --hue: 200;
-  --saturation: 2.4%;
-  --lightness: 48.2%;
+  background-color:hsl(200,2.4%,48.2%);
   color: white;
 }
 
@@ -127,7 +116,7 @@ background-color: #c9b458;
 
 .tile {
   font-size: 2em;
-  color:var(--primary-color2);
+  color:var(--primary-color);
   border: .09em solid hsl(240, 2%, 23%);
   text-transform: uppercase;
   font-weight: bold;
