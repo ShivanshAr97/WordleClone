@@ -48,6 +48,7 @@ body{
   margin: 0;
   padding: 1em;
   font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .keyboard {
@@ -116,7 +117,7 @@ background-color: #c9b458;
 
 .tile {
   font-size: 2em;
-  color:var(--primary-color);
+  color:var(--primary-color2);
   border: .09em solid hsl(240, 2%, 23%);
   text-transform: uppercase;
   font-weight: bold;
